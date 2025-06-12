@@ -7,7 +7,7 @@ form.addEventListener('submit', event => {
   event.preventDefault();
 
   const formData = new FormData(form);
-  const delay = Number(formData.get('delay'));
+  const delay = +formData.get('delay');
   const state = formData.get('state');
 
   createPromise(delay, state)
